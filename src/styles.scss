@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'src/app/styles/theme.scss';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.padded {
+  padding: 20px;
+}
+
+.round-border {
+  border-radius: 5px;
+}
+
+.snack-bar {
+  background-color: $primary500;
+  color: white;
+}
+
+.highlight {
+  color: $accent500;
+}
