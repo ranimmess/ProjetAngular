@@ -27,12 +27,7 @@ export class ViewPostComponent implements OnInit {
     this.commentForm = new FormGroup({
       text: new FormControl('', Validators.required)
     });
-    this.comment = {
-      comment: '',
-      IdSujet: this.sujetId,
-      IdCommantaire: this.sujetId
-      
-    };
+    
      }
 
   ngOnInit(): void {
@@ -62,10 +57,13 @@ export class ViewPostComponent implements OnInit {
    
   }
 
-
+  insc: Array<Commantaire> = [];
   getListCommentaire(){
         
     this.sujetService.getCommentsById(this.sujetId).subscribe((data:any) => {
+      data.forEach((element:any) => {
+        this.insc.push(element)
+      });
       console.log(data);
       this.comments = data;
     }, error => console.log(error));

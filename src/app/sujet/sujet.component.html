@@ -1,19 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="search-hero">
+      <input type="text" name="search" [(ngModel)]="searchText" placeholder="search">
+    </div>
+  </div>
+</div>
+
 <!-- Display Posts-->
-<div class="row post" *ngFor="let post of sujets">
+<div class="row post" *ngFor="let post of sujets |filter:searchText">
   
   <!-- Section to Display Post Information-->
   <div class="col-md-11">
     <span class="subreddit-info">
       <span class="subreddit-text"><a class="posturl" routerLink="">{{post.libelleSujet}}</a></span>
-      <span> . Posted by <a class="username" routerLink="/">User Test</a></span>
-      <span> . a month ago</span>
+      <span> . Posted by <a class="username" routerLink="/">User Test on</a></span>
+      <span> {{post.timestamp|date:'d/M/Y'}} </span>
     </span>
     <hr />
     <div class="post-title">
       <a class="postname" href="">{{post.libelleSujet}}</a>
     </div>
     <div>
-      <p class="post-text" [innerHtml]="post.libelleSujet"></p>
+      <p class="post-text" [innerHtml]="post.decreption"></p>
     </div>
     <hr />
     <span>
@@ -21,6 +29,8 @@
         
         
       </a>
+     
+                        
       <button class="login" (click)="viewPost(post.idSujet)">
         Read Post
       </button>

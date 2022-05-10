@@ -8,24 +8,26 @@
         </div>
         <div class="col-md-11">
           <span>
-            <span class="subreddit-text"><a class="post-url" href="">{{sujet.libelleSujet}}</a></span>
-            <span> . Posted
-              <span> a month ago </span>
+            
+            <span> . Posted on
+              <span> {{sujet.timestamp|date:'d/M/Y'}}</span>
               by              
               <a class="username" href="">User Test</a>
             </span>
+            <p class="card-category"> Total number of comments is {{ insc?.length }}</p>
+                        
           </span>
           <hr />
           <a routerLink="post.url" class="post-title">{{sujet.libelleSujet}}</a>
           <div>
-            <p class="post-text" [innerHtml]="sujet.libelleSujet"></p>
+            <p class="post-text" [innerHtml]="sujet.decreption"></p>
           </div>
           <div class="post-comment">
-            
-              
-                <textarea class="form-control"  placeholder="Your Thoughts?" class ="form-control" id = "libelleCommentaire"
+          
+          <textarea class="form-control"  placeholder="Your Thoughts?" class ="form-control" id = "libelleCommentaire"
                 [(ngModel)] = "commentaire" name = "commentaire"></textarea>
               </div>
+              
               <button type="submit" (click)="addCommentaire()" class="button">Comment</button>
               
             
@@ -36,16 +38,17 @@
                 <a routerLink="/user/comment.username">{{comment.comment}}</a>
               </div>
               <div>
-                <p>a month ago</p>
+                <span>
+                <p>{{comment.timestamp|date:'d/M/Y'}}</p>
+              
+                </span>
               </div>
-              <b>{{comment.comment}}</b>
-              
-              <div>
-              
+            </div>
+            
               <button type="submit" (click)="deleteComment(comment.idCommantaire)" class="button">delete</button>
-            </div>
-            </div>
+            
             <hr />
+            
           </div>
         </div>
       </div>

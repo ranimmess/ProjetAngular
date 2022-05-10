@@ -11,6 +11,7 @@ import { UpdateSujetComponent } from './update-sujet/update-sujet.component';
 import { HeaderComponent } from './header/header.component';
 import { SideBarComponent } from './shared/side-bar/side-bar.component';
 import { ViewPostComponent } from './post/view-post/view-post.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ViewPostComponent } from './post/view-post/view-post.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
