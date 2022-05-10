@@ -1,0 +1,56 @@
+
+
+
+<div class="container mt-5 px-2">
+  <div class="mb-2 d-flex justify-content-between align-items-center">
+    <button class="btn btn-success" (click)="AddRayon()">Add Rayon</button>
+  
+
+  
+</div>
+<div class="search-provider col-md-4 ">
+  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" 
+  autocomplete="off" placeholder="&#61442;  Taper pour chercher..">
+</div>
+<br>
+
+  <div class="table-responsive">
+    <table class="table table-responsive table-striped table-hover table-bordered">
+      <thead>
+      <tr class="bg-light">
+       
+        <th scope="col" >Id Rayon</th>
+        <th scope="col" >codeRayon</th>
+        <th scope="col" >libelleRayon</th>
+      
+        
+     
+      
+        <th scope="col" >delete</th>
+        <th scope="col"  >Update</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let rayon of ListRayon ">
+      
+        <td>{{rayon.idRayon}}</td>
+        <td>{{rayon.codeRayon}}</td>
+        <td>{{rayon.libelleRayon}}</td>
+        
+    
+        
+        <td><button class="btn btn-danger" (click)="delete(rayon)">Delete</button></td>
+        <td><button class="btn btn-success" (click)="update(rayon)">Update</button></td>
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+  
+</div>
+

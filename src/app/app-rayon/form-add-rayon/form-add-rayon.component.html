@@ -1,0 +1,49 @@
+
+<div class="container-fluid px-1 py-2 mx-auto">
+
+    <div class="row d-flex justify-content-center">
+      <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+        <button class="btn btn-success" (click)="return()">Go Back</button>
+        <div class="card">
+          <h5 class="text-center mb-4">Bienvenue</h5>
+  
+          <form class="form-card" #f="ngForm">
+     <div>
+              <div class="form-group col-sm-6 flex-column d-flex">
+                <label class="form-control-label px-3">codeRayon <span class="text-danger"> *</span></label>
+                <input type="text" id="text" name="text" [(ngModel)]="rayon.codeRayon" required   #ln="ngModel">
+                <div class="alert alert-danger" *ngIf="ln.invalid && ln.touched">
+                  <div *ngIf="ln.hasError('required')"> Name is a required field</div>
+            
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-between text-left">
+              <div class="form-group col-sm-6 flex-column d-flex">
+                <label class="form-control-label px-3">libelleRayon <span class="text-danger"> *</span></label>
+                <input type="text" id="libelleRayon" name="libelleRayon" [(ngModel)]="rayon.libelleRayon" required   #ln="ngModel">
+                <div class="alert alert-danger" *ngIf="ln.invalid && ln.touched">
+                  <div *ngIf="ln.hasError('required')"> Quantité is a required field</div>
+            
+                </div>
+              </div>
+              
+  
+              
+             
+            </div>
+  
+           
+             
+                        
+         
+            
+            
+            <div class="row justify-content-end">
+              <div class="form-group col-auto"> <button  class="btn-primary" (click)="f.reset()">Reset</button> </div>
+              <div class="form-group col-auto"> <button type="submit" class="btn-primary" (click)="save()"  [disabled]="f.invalid">Register</button> </div>
+            </div>
+        
+       
+  
+  
