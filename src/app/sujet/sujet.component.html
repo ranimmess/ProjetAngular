@@ -1,0 +1,35 @@
+<!-- Display Posts-->
+<div class="row post" *ngFor="let post of sujets">
+  
+  <!-- Section to Display Post Information-->
+  <div class="col-md-11">
+    <span class="subreddit-info">
+      <span class="subreddit-text"><a class="posturl" routerLink="">{{post.libelleSujet}}</a></span>
+      <span> . Posted by <a class="username" routerLink="/">User Test</a></span>
+      <span> . a month ago</span>
+    </span>
+    <hr />
+    <div class="post-title">
+      <a class="postname" href="">{{post.libelleSujet}}</a>
+    </div>
+    <div>
+      <p class="post-text" [innerHtml]="post.libelleSujet"></p>
+    </div>
+    <hr />
+    <span>
+      <a class="btnCommments" role="button">
+        
+        
+      </a>
+      <button class="login" (click)="viewPost(post.idSujet)">
+        Read Post
+      </button>
+      <button class="login" (click)="updateSujet(post.idSujet)">
+        Update
+      </button>
+      <button class="login" (click)="delete(post.idSujet)">
+        delete
+      </button>
+    </span>
+  </div>
+</div>

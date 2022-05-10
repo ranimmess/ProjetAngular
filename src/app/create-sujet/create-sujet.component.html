@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+      <hr />
+      <div class="create-post-container col-md-9">
+        <form (ngSubmit) = "onSubmit()">
+          <div class="form-group">
+            <div class="create-post-heading">Create Post</div>
+            <hr />
+              <input type="text" placeholder="title" class ="form-control" id = "libelleSujet"
+                [(ngModel)] = "sujet.libelleSujet" name = "libelleSujet">
+            <span>
+              <div style="margin-top: 5px" class="float-right">
+                
+                <button class="btnCreatePost" type="submit">Post</button>
+              </div>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

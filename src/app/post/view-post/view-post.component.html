@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <hr />
+    <div class="col-md-9">
+      <div class="row post">
+        <div class="col-md-1">
+          
+        </div>
+        <div class="col-md-11">
+          <span>
+            <span class="subreddit-text"><a class="post-url" href="">{{sujet.libelleSujet}}</a></span>
+            <span> . Posted
+              <span> a month ago </span>
+              by              
+              <a class="username" href="">User Test</a>
+            </span>
+          </span>
+          <hr />
+          <a routerLink="post.url" class="post-title">{{sujet.libelleSujet}}</a>
+          <div>
+            <p class="post-text" [innerHtml]="sujet.libelleSujet"></p>
+          </div>
+          <div class="post-comment">
+            
+              
+                <textarea class="form-control"  placeholder="Your Thoughts?" class ="form-control" id = "libelleCommentaire"
+                [(ngModel)] = "commentaire" name = "commentaire"></textarea>
+              </div>
+              <button type="submit" (click)="addCommentaire()" class="button">Comment</button>
+              
+            
+          
+          <div style="margin-top: 60px;" *ngFor="let comment of comments">
+            <div class="comment">
+              <div class="username">
+                <a routerLink="/user/comment.username">{{comment.comment}}</a>
+              </div>
+              <div>
+                <p>a month ago</p>
+              </div>
+              <b>{{comment.comment}}</b>
+              
+              <div>
+              
+              <button type="submit" (click)="deleteComment(comment.idCommantaire)" class="button">delete</button>
+            </div>
+            </div>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="flex-grow-1">
+            <a aria-label="Home" class="logo" routerLink="/">
+                
+
+                 <a> <img src="assets/img/aaaa.jpg" 
+                    width="80" 
+     height="60"
+                    /> </a>
+              
+                
+                <span class="reddit-text">
+                    Consomi Tounsi
+                </span>
+            </a>
+        </div>
+        <div class="flex-grow-1 float-right">
+            <div *ngIf="" ngbDropdown class="float-right">
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button >Profile</button>
+                    <button >Logout</button>
+                </div>
+                <button class="userdetails" id="dropdownBasic1" ngbDropdownToggle>
+                    <img class="account-icon" src="https://www.redditstatic.com/avatars/avatar_default_08_D4E815.png">
+                    
+                </button>
+            </div>            
+            <div *ngIf=>
+                <a routerLink="/sign-up" class="float-right sign-up mr-2">Sign up</a>
+                <a routerLink="/login" class="float-right login mr-2">Login</a>
+            </div>
+        </div>
+        <ul class = "navbar-nav">
+            <li class = "nav-item">
+                <a routerLink="sujets" routerLinkActive="active" class="nav-link" >Sujet List</a>
+            </li>
+            <li class = "nav-item">
+                <a routerLink="create-sujet" routerLinkActive="active" class="nav-link" >Add Sujet</a>
+            </li>
+        </ul>
+    </nav>
+</header>
