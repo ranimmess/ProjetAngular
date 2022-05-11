@@ -29,10 +29,10 @@ export class PanierService {
   }
 
   //store (Post )
-  addToPanier(apd: AddToPanierDto, user_id:number=1): Observable<ApiResponse>{
+  addToPanier(apd: AddToPanierDto, user_id:number): Observable<ApiResponse>{
     return this.http.post<ApiResponse>(this.baseURL + 'add?user_id=' + user_id, apd).pipe(
       tap(v => this.notifyPanierListChanged()),
-      tap(n => this.notifynbrElemListChanged())
+      tap(n => this.notifynbrElemListChanged(user_id))
     );
       }
 
@@ -65,8 +65,8 @@ export class PanierService {
     return this.http.get<nbrPanier>(this.baseURL + 'nbrPanier?user_id=' + user_id);
   }
 
-  notifynbrElemListChanged(){
-    this.nbrElementPanier().subscribe(
+  notifynbrElemListChanged(user_id:number){
+    this.nbrElementPanier(user_id).subscribe(
       p => this.nbrElemChanged.next(p)
     )
   }

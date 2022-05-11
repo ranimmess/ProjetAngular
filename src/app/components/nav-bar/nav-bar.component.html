@@ -24,7 +24,7 @@
                     <span class="badge badge-pill badge-danger notify">{{nbrElemnt}}</span>
                 </div>
                 <div class="widget-header icontext">
-                    <a href="#" ><img src="/assets/oum.jpg" class=" icon icon-sm rounded-circle border" alt="logo" style="width: 5%;" style="height:5%;"></a>
+                    <a href="#" ><img *ngIf="IsLogedIn" src="/assets/oum.jpg" class=" icon icon-sm rounded-circle border" alt="logo" style="width: 5%;" style="height:5%;"></a>
                     <div class="text">
                         <span *ngIf="IsLogedIn" class="text-muted">Welcome!</span>
                         <div> 

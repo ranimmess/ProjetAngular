@@ -4,4 +4,10 @@ export class AddToPanierDto{
     productId?: number;
     quantity?: number;
 
+    constructor(id:number, p:number, q:number){
+        this.id=id;
+        this.productId=p;
+        this.quantity=q;
+    }
+
 }

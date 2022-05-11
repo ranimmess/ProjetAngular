@@ -127,3 +127,27 @@ button.normal{
     bottom: 20px;
     right: 10px;
 }
+
+.rating-list {
+    border-top: 1px solid orchid;
+    padding: 15px 0;
+}
+
+::ng-deep label.star {
+    padding: 0 5px !important;
+    font-size: 25px !important;
+}
+
+.cart {
+    width: 35px;
+    height: 35px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: rgb(254, 7, 7);
+    color: rgb(255, 0, 0);
+    border: 1px solid #0df730;
+    border-color: rgb(20, 253, 62);
+  
+    bottom: 20px;
+    right: 10px;
+}
