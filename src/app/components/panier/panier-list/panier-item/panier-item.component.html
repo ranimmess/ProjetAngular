@@ -1,0 +1,41 @@
+<tr>
+  <td class="align-middle">
+      <figure class="itemside"  >
+          <div class="aside"><img [src]="image" class="img-sm"></div>
+          <figcaption class="info">
+              <a href="#" class="title text-dark">{{name}}</a>
+              <p class="text-muted small" >{{description}}</p>
+          </figcaption>
+      </figure>
+  </td>
+  <td class="align-middle"> 
+    <a (click)="minusOne()"><i class="fa fa-minus"></i></a>
+    <input min="1" id="{{id}}"
+           
+           [(ngModel)]="quantity"
+           size="5"
+           type="number"
+           required
+           name='count'>
+    <a (click)="addOne()"> <i class="fa fa-plus"></i></a>
+  </td>
+  <td class="align-middle"> 
+      <div class="price-wrap"> 
+          <var class="price"> {{prix}} TND</var> 
+           
+      </div> <!-- price-wrap .// -->
+  </td>
+  <td class="text-right align-middle"> 
+  <a data-original-title="Save to Wishlist" title="" href="" class="btn btn-light mr-2" data-toggle="tooltip"> <i class="fa fa-heart"></i></a> 
+  <a (click)="remove()"  class="btn btn-light"> Remove</a>
+  </td>
+
+</tr>
+
+
+
+
+
+
+
+    

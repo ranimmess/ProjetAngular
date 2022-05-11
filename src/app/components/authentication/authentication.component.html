@@ -1,0 +1,36 @@
+<div class="header-body">
+      <br>
+
+
+<div id="appContainer">
+  
+    <div class="row align-items-center h-100">
+      <div class="col-md-5 col-sm-10 mx-auto">
+  
+        <div id="cardStyle" class="card justify-content-center">
+          <div>
+            <button class="btn" [class.btn-light]="flag" type="button" style="width: 35%;" (click)="apply('login')" >Login</button>
+            <button class="btn" [class.btn-light]="!flag" type="button" style="width: 35%;" (click)="apply('reg')" >Register</button>
+          </div>
+  
+          <div class="card-body">
+            <div *ngIf="flag">
+              <app-login></app-login>
+  
+            </div>
+            <div *ngIf="!flag">
+              <app-register></app-register>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  </div>
+    </div>
+  
+

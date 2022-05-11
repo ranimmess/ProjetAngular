@@ -1,0 +1,54 @@
+<app-nav-bar></app-nav-bar>
+<section id="prodetails" class="section-p1">
+    <div class="single-pro-image">
+        <img class="cart" [src]="imageUrl" width="100%" id="MainImg" alt="">
+
+        
+    </div>
+
+    <div class="single-pro-details">
+        <h6>Home / {{categorie}}</h6>
+        <h4>Men's Fashion T Shirt</h4>
+        <h2>{{price}} TND</h2>
+        <select>
+            <option>Select Size</option>
+            <option>XL</option>
+            <option>XXL</option>
+            <option>Small</option>
+            <option>Large</option>
+        </select>
+        <input type="number" value="1">
+        <button class="normal">Add To Cart</button>
+        
+        
+        <ngx-star-rating [(ngModel)]="rating" (click)="x()"></ngx-star-rating>
+        <div>Rating: {{rating}}</div>
+        <h4>Product Details: </h4>
+        <span>{{description}}
+        </span>
+    </div>
+</section>
+
+
+<section id="product1" class="section-p1">
+    <h2>Featured Products</h2>
+    <div class="row justify-content-around align-items-center pro-container">
+        <div class="pro" *ngFor="let item of mostLiked">
+            <img [src]="item.imageUrl" alt="">
+            <div class="des">
+                <span>{{item.name}}</span>
+                <h5>{{item.description}}</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>{{item.price}} TND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-bag cart"></i></a>
+        </div>
+    </div>
+</section>
+

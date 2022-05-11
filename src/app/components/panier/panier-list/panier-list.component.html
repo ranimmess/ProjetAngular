@@ -1,0 +1,48 @@
+<section class="section-content padding-y">
+    <div class="container">
+    <div class="row">
+        <main class="col-md-9">
+    <div class="card">
+
+    <table class="table table-borderless table-shopping-cart">
+        <thead class="text-muted">
+        <tr class="small text-uppercase">
+        <th scope="col" width="200">Product</th>
+        <th scope="col" width="120">Quantity</th>
+        <th scope="col" width="120">Price</th>
+        <th scope="col" class="text-right" width="200"> </th>
+        </tr>
+        </thead>
+        <tbody>
+    
+        <app-panier-item
+        *ngFor="let pItems of panierItems"
+        [panierItem]="pItems"
+        ></app-panier-item>
+
+
+    </tbody>
+    </table>
+
+    
+    <div class="card-body border-top">
+        <a routerLink="/payment" class="btn btn-primary float-md-right"> Make Purchase <i class="fa fa-chevron-right"></i> </a>
+        <a href="#" class="btn btn-light"> <i class="fa fa-chevron-left"></i> Continue shopping </a>
+    </div>  
+    </div> <!-- card.// -->
+
+    <div class="alert alert-success mt-3">
+        <p class="icontext"><i class="icon text-success fa fa-truck"></i> Free Delivery within 1-2 weeks</p>
+    </div>
+
+    </main>
+
+    <aside class="col-md-3">
+        
+    <app-order-total-summary [totalcost]="totalcost "></app-order-total-summary>
+
+</aside> <!-- col.// -->
+    </div> <!-- container .//  -->
+
+
+

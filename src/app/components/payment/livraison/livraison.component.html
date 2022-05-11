@@ -1,0 +1,179 @@
+
+                <div class="col-xs-12">
+                  <form #lvrForm="ngForm" (ngSubmit)="onSubmit(lvrForm)">
+                    <!-- ---------- -->
+                    <div class="row">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-sm">
+                            <div class="row">
+                              <div class="col-xs-12">
+                                <div class="form-group">
+                                  <label for="title">City: </label>
+                                  <input
+                                    type="text"
+                                    id="title"
+                                    class="form-control" required
+                                    #inputTitle="ngModel"
+                                    [class.is-invalid]="inputTitle.invalid && inputTitle.touched"
+                                    name="title"
+                                    [(ngModel)]="lvr.city!"
+                                  />
+                                  <small class="text-danger" *ngIf="inputTitle.invalid && inputTitle.touched">
+                                    Ce champ est obligatoire
+                                  </small>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- ---------- -->
+                            <div class="row">
+                              <div class="col-xs-12">
+                                <div class="form-group">
+                                  <label for="author">country: </label>
+                                  <input
+                                    type="text"
+                                    id="structure"
+                                    class="form-control" required
+                                    #inputAuthor="ngModel"
+                                    [class.is-invalid]="inputAuthor.invalid && inputAuthor.touched"
+                                    name="author"
+                                    [(ngModel)]="lvr.country"
+                                  />
+                                  <small class="text-danger" *ngIf="inputAuthor.invalid && inputAuthor.touched">
+                                    Ce champ est obligatoire
+                                  </small>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            <!-- ---------- -->
+                            <div class="row">
+                              <div class="col-xs-12">
+                                <div class="form-group">
+                                  <label for="synopsis">street</label>
+                                  <textarea
+                                    type="text"
+                                    id="synopsis"
+                                    class="form-control" required
+                                    #inputSynopsis="ngModel"
+                                    [class.is-invalid]="inputSynopsis.invalid && inputSynopsis.touched"
+                                    name="synopsis"
+                                    [(ngModel)]="lvr.street"
+                                 
+                                  ></textarea>
+                                  <small class="text-danger" *ngIf="inputSynopsis.invalid && inputSynopsis.touched">
+                                    Ce champ est obligatoire
+                                  </small>
+                                </div>
+                              </div>
+                            </div>
+              
+                            <!-- ---------- -->
+              
+                            <div class="row">
+                              <div class="col-xs-12">
+                                <div class="form-group">
+                                  <label for="prix">zip Code: </label>
+                                  <input
+                                    type="text"
+                                    id="prix"
+                                    class="form-control" required
+                                    #inputPrix="ngModel"
+                                    [class.is-invalid]="inputPrix.invalid && inputPrix.touched"
+                                    name="prix"
+                                    [(ngModel)]="lvr.zipCode"
+                                 
+                                  />
+                                  <small class="text-danger" *ngIf="inputPrix.invalid && inputPrix.touched">
+                                    Ce champ est obligatoire
+                                  </small>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- ---------- -->
+                            <div class="row">
+                              <div class="col-xs-12">
+                                <button
+                                  type="submit"
+                                  class="btn btn-success"
+                                  [disabled]="!lvrForm.form.valid"
+                                >
+                                  Livrer maintenant
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-danger"
+                                  (click)="onCancel()"
+                                >
+                                  Cancel
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+              
+                          <span class="spacerr"></span>
+              
+                          <div class="col-sm">
+                            <div class="row">
+                              <div class="col-xs-12">
+                                <div class="form-group">
+                                  <label for="availability">Numero Tél: </label>
+                                  <input
+                                    type="text"
+                                    id="availability"
+                                    rows="5"
+                                    class="form-control" required
+                                    #inputAvailability="ngModel"
+                                    [class.is-invalid]="inputAvailability.invalid && inputAvailability.touched"
+                                    name="availability"
+                                    [(ngModel)]="lvr.numTel"
+                                 />
+                                 
+                                  <small class="text-danger" *ngIf="inputAvailability.invalid && inputAvailability.touched">
+                                    Ce champ est obligatoire
+                                  </small>
+                                    
+                                </div>
+                              </div>
+                            </div>
+                           
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <!-- ---------- -->
+              
+                    <!-- ---------- -->
+                    <!-- ---------- -->
+                  </form>
+                </div>
+             
+  
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              
+
+    <!-- end forms -->
+
+
+
+
+<br>
+
+<div class="alert alert-info" id="alert-purchase" hidden>
+<strong>Thank you </strong> for your order!
+</div>
